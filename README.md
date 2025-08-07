@@ -13,3 +13,8 @@ Technology Stack
 •	Data Sources: ClinicalTrials.gov, AACT, PubMed, Drug@FDA
 Results
 Our best-performing models, XGBoost and Random Forest, achieved an accuracy of 0.84 and 0.83, respectively, and an AUC of over 0.80. The analysis showed that Enrollment and Retention Rate were the most significant predictors of trial success.
+
+This project includes large zipped CSV files that are too big to be stored directly on GitHub.
+You can download them from Dropbox using the link below:
+https://www.dropbox.com/scl/fo/j40g0j4huyt200s7czmrm/AKNXgkoCW3qd4CCGrKo5ZDI?rlkey=vas6lotibh22sfrsy9f6bdvyc&st=d9hxgy64&dl=0
+
