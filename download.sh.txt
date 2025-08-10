@@ -1,0 +1,26 @@
+#!/bin/bash
+
+echo "Downloading zipped CSV files from Dropbox..."
+
+# Create data directory if it doesn't exist
+mkdir -p data
+
+# Download the zipped CSV files
+curl -L -o data/zipped_csvs.zip "https://www.dropbox.com/scl/fo/j40g0j4huyt200s7czmrm/AKNXgkoCW3qd4CCGrKo5ZDI?rlkey=1121nsqn16ohs6udpycmuz1sv&st=wz8a4vvo&dl=1"
+
+# Check if download was successful
+if [ $? -ne 0 ]; then
+    echo "Download failed. Please check your internet connection or the Dropbox link."
+    exit 1
+fi
+
+echo "Extracting files..."
+unzip -o data/zipped_csvs.zip -d data
+
+# Check if unzip was successful
+if [ $? -ne 0 ]; then
+    echo "Extraction failed. Please make sure 'unzip' is installed."
+    exit 1
+fi
+
+echo "Done! Files are in the ./data directory."
